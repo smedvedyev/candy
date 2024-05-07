@@ -46,9 +46,9 @@ public class Candy {
             result = -1;
         } else {
             if (c % k == 0) {
-                result = c / k;
+                result = c / k; //perform regilar division
             } else {
-                result = -1;
+                result = -1; //return -1 if numbers cannot be divided
             }
         }
         return result;
