@@ -42,8 +42,10 @@ public class Candy {
      */
     static long divide(long k, long c) {
         long result; // value to be returned
-        if (k == 0) { //no kids, no candies case
+        if (k == 0 && c != 0) { //no kids to distribute candies to
             result = -1;
+        } else if (k == 0 && c == 0) {
+            result = 0;
         } else {
             if (c % k == 0) {
                 result = c / k; //perform regilar division

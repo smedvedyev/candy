@@ -84,7 +84,7 @@ public class CandyTest {
     
     @Test
     public void testDivideBothZeros() {
-        check(0, 0, false);
+        check(0, 0, true);
     }
     /**Large numbers, which can be divided.*/
     
@@ -92,7 +92,7 @@ public class CandyTest {
     public void testDivideLargeNumbersDivide() {
         check(100000, 200000, true);
     }
-    /**Large numbers, which can be divided.*/
+    /**Large numbers, which do not divide.*/
     
     @Test
     public void testDivideLargeNumbersNotDivide() {
