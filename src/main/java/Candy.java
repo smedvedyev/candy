@@ -42,7 +42,7 @@ public class Candy {
      */
     static long divide(long k, long c) {
         long result; // value to be returned
-        if (k == 0 || c == 0) { //no kids, no candies case
+        if (k == 0) { //no kids, no candies case
             result = -1;
         } else {
             if (c % k == 0) {

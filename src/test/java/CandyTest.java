@@ -65,7 +65,7 @@ public class CandyTest {
     /**Border value of children, although cannot be divided.*/
     
     @Test
-    public void testDivideBorderChildrenFalse() {
+    public void testDivideBorderChildrenCantDivide() {
         check(MAX_VALUE, 1, false);
     }
     /**No kids, not possible to divide between 0 kids.*/
@@ -74,11 +74,28 @@ public class CandyTest {
     public void testDivideNoKids() {
         check(0, 1, false);
     }
-    /**No candies, cannot be divided + division by 0.*/
+    /**No candies, hence each child gets 0 candies.*/
     
     @Test
     public void testDivideNoCandies() {
-        check(1, 0, false);
+        check(1, 0, true);
     }
-
+    /**No candies and no children, hence impossible to divide.*/
+    
+    @Test
+    public void testDivideBothZeros() {
+        check(0, 0, false);
+    }
+    /**Large numbers, which can be divided.*/
+    
+    @Test
+    public void testDivideLargeNumbersDivide() {
+        check(100000, 200000, true);
+    }
+    /**Large numbers, which can be divided.*/
+    
+    @Test
+    public void testDivideLargeNumbersNotDivide() {
+        check(100001, 200000, false);
+    }
 }
